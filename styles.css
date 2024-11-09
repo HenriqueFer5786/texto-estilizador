@@ -1,0 +1,190 @@
+/* Reset básico para garantir compatibilidade entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.logo h1 {
+    color: #e6007e;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e6007e;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.content h2 {
+    font-size: 2.5em;
+    color: #e6007e;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+textarea#input-text {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #f0f0f0;
+    resize: vertical;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#stylize-button {
+    background-color: #e6007e;
+    color: #f0f0f0;
+}
+
+#stylize-button:hover {
+    background-color: #ff3385;
+}
+
+#download-button {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+#download-button:hover {
+    background-color: #444;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.output-container {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #e6007e;
+    border-radius: 10px;
+    background-color: #222;
+    color: #f0f0f0;
+    box-shadow: 0 0 15px rgba(230, 0, 126, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    .content h2 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* Estilo da tabela para garantir que seja exibida corretamente */
+.stylized-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+.stylized-output th, .stylized-output td {
+    border: 1px solid #dddddd;
+    padding: 12px 15px;
+}
+
+.stylized-output th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.stylized-output tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
